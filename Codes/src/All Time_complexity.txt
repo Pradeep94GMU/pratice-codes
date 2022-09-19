@@ -15,3 +15,6 @@ Shell Sort	Ω(n)	θ(n log(n))	O(n log(n))         	O(1)
 Tim Sort	Ω(n)	θ(n log(n))	O(n log (n))	        O(n)
 Tree Sort	Ω(n log(n))	θ(n log(n))	O(n^2)	            O(n)
 Cube Sort	Ω(n)	θ(n log(n))	O(n log(n))	            O(n)
+
+
+//worst case is depends on how the input is given and how long it will take to sort....
