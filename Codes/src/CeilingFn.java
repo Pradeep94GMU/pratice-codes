@@ -1,16 +1,15 @@
+import java.util.*;
 public class CeilingFn {
     public static void main(String[] args) {
-         int n = 5;
-         int x = n /2;
-         if(n % 2 == 0){
-             System.out.println(x);
-         }
-         else{
-             int sum = (int) Math.round(x + 0.5);
-             System.out.println(sum);
-         }
-         //simply we have to add another 0.5 to given digit and take round of it to get the ceiling number
+        BitSet bs1 = new BitSet((int) 1e9);
 
+         int x = (int) 2e3;
+         int nums[] = new int[x];
+         for(int i = 0; i < nums.length; i++){
+             nums[i] = (int)1e9;
+         }
+
+        System.out.println(x);
 
     }
 }

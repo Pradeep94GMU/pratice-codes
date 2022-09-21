@@ -2,11 +2,18 @@ import java.util.*;
 
 public class DivideIntoHalf {
     public static void main(String[] args) {
-        int nums[] = { 5,5,3,6,5,3};
+        int xx = (int) 2e5;
+        int nums[] = new int[xx];
+        for(int x = 0; x < nums.length; x++){
+            nums[x] = (int)1e9;
+
+        }
+        System.out.println("You");
+        //int nums[] = { 1,3,3,1,2};
         int count = 0;
-        //Sorting an arry will help to find the equal elements
+        //Sorting an arry will help to find the next equal elements
         Arrays.sort(nums);
-        System.out.println(Arrays.toString(nums));
+        //System.out.println(Arrays.toString(nums));
         //check in whole array
         for(int i = 0; i < nums.length - 1; i++){
             //using a condition to check for my next equal element
@@ -40,6 +47,7 @@ public class DivideIntoHalf {
                 count += nums[i];
             }
         }
+        System.out.println("hello");
         count = count + nums[nums.length - 1];
         System.out.println("Value of total: "+count);
     }
