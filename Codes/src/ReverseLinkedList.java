@@ -4,7 +4,7 @@ class Nooode{
     Nooode next;
     Nooode(int data){
         this.data = data;
-        next = null;
+        this.next = null;
     }
 }
 //using this class to create a simple list first
@@ -43,6 +43,8 @@ public class ReverseLinkedList {
         ReverseLinkedList obj = new ReverseLinkedList();
         obj.head = new Nooode(10);
         obj.head = obj.insert(obj.head,12);
+        obj.head = obj.insert(obj.head,52);
+        obj.head = obj.insert(obj.head,1);
 //        insert(obj.head,14);
 //        insert(obj.head,17);
 
