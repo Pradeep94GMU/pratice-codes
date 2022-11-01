@@ -1,6 +1,5 @@
 public class Primalgorithm {
     static final int V = 5;
-
     static int minindex(int key[], boolean mst[]){
         //this funtion return the minimun index value from the key[]
         int min = Integer.MAX_VALUE;
@@ -13,7 +12,6 @@ public class Primalgorithm {
         }
         return min_index;
     }
-
     static void printPrim(int parent[], int graph[][]){
         int sum = 0;
         //last part is very simple...
@@ -23,9 +21,7 @@ public class Primalgorithm {
             System.out.println();
         }
         System.out.println("Total cost of MST: "+sum);
-
     }
-
     void primalgo(int graph[][]){
         //the algorithm uses 3 array data structure
         //1st one is for storing the key value(this include the weight of vertices also we need min value for index
@@ -34,24 +30,20 @@ public class Primalgorithm {
         boolean mst[] = new boolean[V];
         //3rd is use to store the parent linked vertex
         int parent[] = new int[V];
-
         //at begining i need to intialize the key and mst as some value
         for(int i = 0; i < V; i++){
             key[i] = Integer.MAX_VALUE;
             mst[i] = false;
         }
-
         //now one more last thing to left before doing the step
         //take a starting vertex
         key[0] = 0;
         parent[0] = -1;
-
         //now we can start the steps
         //we need to traverse till number of edges
         for(int edge = 0; edge < V - 1; edge++){
             int parentIndex = minindex(key, mst); //this step is still need to learn  //x store the index value of minimun element of key[]
             mst[parentIndex] = true;
-
             //now traverse all adjancy vertex of x
             for(int adjvert = 0; adjvert < V; adjvert++ ){
                 if(mst[adjvert] == false && graph[parentIndex][adjvert] != 0 && graph[parentIndex][adjvert] < key[adjvert]){
@@ -60,13 +52,9 @@ public class Primalgorithm {
                     parent[adjvert] = parentIndex;
                 }
             }
-
         }
-
         printPrim(parent, graph);
-
     }
-
     public static void main(String[] args) {
 
         //define the obj
@@ -79,15 +67,6 @@ public class Primalgorithm {
                 { 6, 8, 0, 0, 9 },
                 { 0, 5, 7, 9, 0 }
         };
-
         p.primalgo(graph);
-
-//    for(int i = 0; i < graph.length; i++){
-//        for(int j = 0; j < graph[0].length; j++){
-//            System.out.print(graph[i][j]+" ");
-//        }
-//        System.out.println();
-//    }
-
     }
 }
